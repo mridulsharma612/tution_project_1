@@ -1,0 +1,11 @@
+$(document).ready(function(){
+  $("#u").click(function(){
+    $u=$("#up").val();
+    $.post("tbupdate1.php",{
+        u:$u
+    },
+    function(data,info){
+      $("#info1").html(data);
+    });
+  });
+});

@@ -1,0 +1,12 @@
+$(document).ready(function(){
+  $("#but1").click(function(){
+    $.ajax({
+        url:'editproducts1.php',
+        type:'POST',
+        data:$('#ed').serialize(),
+        success:function(show){
+          $("#info1").html(show);
+        }
+    });
+  });
+});

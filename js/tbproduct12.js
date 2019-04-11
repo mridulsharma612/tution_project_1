@@ -1,0 +1,12 @@
+$(document).ready(function(){
+  $("#s").click(function(){
+     $c=$("#product").val();
+     $.post("tbproduct123.php",
+     {
+         c:$c
+     },
+     function(details,status){
+       $("#info").html(details);
+     });
+  }); 
+});

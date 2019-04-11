@@ -1,0 +1,12 @@
+$(document).ready(function(){
+  $("#sub1").click(function(){
+    $.ajax({
+         url:'userdetails1.php',
+         type:'POST',
+         data:$('#ud').serialize(),
+         success:function(status){
+             $("#ab1").html(status);
+         }
+    });
+  });
+});

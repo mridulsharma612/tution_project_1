@@ -1,0 +1,12 @@
+$(document).ready(function(){
+  $("#bu1").click(function(){
+      $.ajax({
+          url:'category1.php',
+          type:'POST',
+          data:$('#info').serialize(),
+          success:function(details){
+              $("#p1").html(details);
+          }
+      });
+  });
+});
